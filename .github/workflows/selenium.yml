@@ -30,4 +30,4 @@ jobs:
       env:
         CHROME_BIN: /usr/bin/chromium-browser
       run: |
-        python main.py
+        python automacao.py
