@@ -13,16 +13,12 @@ options.add_argument("--disable-gpu")  # Recomendado no Windows
 options.add_argument("--no-sandbox")  # Necessário em alguns ambientes Linux
 options.add_argument("--window-size=1920,1080")  # Define tamanho da tela virtual
 
-while True:
-    print(f"Abrindo o site (modo headless): {url}")
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-    driver.get(url)
+print(f"Abrindo o site (modo headless): {url}")
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+driver.get(url)
 
-    # Esperar 60 segundos
-    time.sleep(60)
+# Esperar 60 segundos
+time.sleep(60)
 
-    # Fecha o navegador
-    driver.quit()
-
-    # Esperar 60 segundos
-    time.sleep(60)
+# Fecha o navegador
+driver.quit()
